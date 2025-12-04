@@ -147,15 +147,7 @@ choice = 0
 # 5. Test it - the menu should repeat until you type "3"
 #
 # Write your code (modify your Task 3 code):
-while choice != "3":
-    print("1. Add task")
-    print("2. View all task")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
-    print()
-    print(f"You selected option: {choice}")
-    print()
+
 
 
 
@@ -194,7 +186,24 @@ while choice != "3":
 # 3. Test it by entering invalid options like "5" or "hello"
 #
 # Write your code (add to your while loop from Task 4):
-
+while choice != "3":
+    print("1. Add task")
+    print("2. View all task")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    while choice != "1" and choice != "2" and choice != "3":
+       print("ERROR: Invalid choice")
+       print()
+       print("1. Add task")
+       print("2. View all tasks")
+       print("3. Exit")
+       print()
+       choice = input("Select an option: ")
+       print()
+    print()
+    print(f"You selected option: {choice}")
+    print()
 
 
 

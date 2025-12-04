@@ -220,30 +220,7 @@ choice = 0
 # 2. Test option 1 - it should ask for input and confirm
 #
 # Write your code (add to your while loop):
-while choice != "3":
-    print("1. Add task")
-    print("2. View all task")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
-    while choice != "1" and choice != "2" and choice != "3":
-       print("ERROR: Invalid choice")
-       print()
-       print("1. Add task")
-       print("2. View all tasks")
-       print("3. Exit")
-       print()
-       choice = input("Select an option: ")
-       print()
-    if choice == "1":
-        task_name = input("Enter task name: ")
-        priority = input("Enter task priority (High/Medium/Low): ")
-        print()
-        print("Task added sucessfully!")
-        print()
-    print()
-    print(f"You selected option: {choice}")
-    print()
+
 
 
 
@@ -280,7 +257,36 @@ while choice != "3":
 # 4. Test by pressing Enter without typing anything
 #
 # Write your code (add to your choice == "1" section):
-
+while choice != "3":
+    print("1. Add task")
+    print("2. View all task")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    while choice != "1" and choice != "2" and choice != "3":
+       print("ERROR: Invalid choice")
+       print()
+       print("1. Add task")
+       print("2. View all tasks")
+       print("3. Exit")
+       print()
+       choice = input("Select an option: ")
+       print()
+    if choice == "1":
+        task_name = input("Enter task name: ")
+        while task_name == "":
+            print("Error - Task name CANNOT be blank!")
+            task_name = input("Enter task name: ")
+        priority = input("Enter task priority (High/Medium/Low): ")
+        while priority == "":
+            print("Error - Priority CANNOT be blank!")
+            priority = input("Enter task priority (High/Medium/Low): ")
+        print()
+        print("Task added sucessfully!")
+        print()
+    print()
+    print(f"You selected option: {choice}")
+    print()
 
 
 

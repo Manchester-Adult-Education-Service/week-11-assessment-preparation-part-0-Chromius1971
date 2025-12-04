@@ -43,7 +43,7 @@
 # 2. Print the tasks list to see what it looks like (it should be empty)
 #
 # Write your code below:
-
+tasks = []
 
 
 
@@ -72,9 +72,11 @@
 # 5. Print a blank line using print()
 #
 # Write your code below:
-
-
-
+print("========================================================================")
+print("TASK MANAGER SYSTEM")
+print("Keep track of your daily tasks")
+print("========================================================================")
+print()
 
 # -------------------------------------------
 # SWAP COMPUTERS (Don't swap computers if working alone)

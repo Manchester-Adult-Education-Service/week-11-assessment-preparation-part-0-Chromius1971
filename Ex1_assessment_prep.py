@@ -291,38 +291,6 @@ choice = 0
 # 3. Test by adding a few tasks
 #
 # Write your code (add to your choice == "1" section):
-while choice != "3":
-    print("1. Add task")
-    print("2. View all task")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
-    while choice != "1" and choice != "2" and choice != "3":
-       print("ERROR: Invalid choice")
-       print()
-       print("1. Add task")
-       print("2. View all tasks")
-       print("3. Exit")
-       print()
-       choice = input("Select an option: ")
-       print()
-    if choice == "1":
-        task_name = input("Enter task name: ")
-        while task_name == "":
-            print("Error - Task name CANNOT be blank!")
-            task_name = input("Enter task name: ")
-        priority = input("Enter task priority (High/Medium/Low): ")
-        while priority == "":
-            print("Error - Priority CANNOT be blank!")
-            priority = input("Enter task priority (High/Medium/Low): ")
-        print()
-        task = {"name": task_name, "priority": priority, "status": "Not started"}
-        tasks.append(task)
-        print("Task added sucessfully!")
-        print()
-    print()
-    print(f"You selected option: {choice}")
-    print()
 
 
 
@@ -363,7 +331,58 @@ while choice != "3":
 # 2. Test by adding some tasks, then viewing them
 #
 # Write your code (add after your choice == "1" section):
-
+while choice != "3":
+    print("1. Add task")
+    print("2. View all task")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    while choice != "1" and choice != "2" and choice != "3":
+       print("ERROR: Invalid choice")
+       print()
+       print("1. Add task")
+       print("2. View all tasks")
+       print("3. Exit")
+       print()
+       choice = input("Select an option: ")
+       print()
+    if choice == "1":
+        print()
+        print(f"You selected option: {choice}")
+        print()
+        task_name = input("Enter task name: ")
+        while task_name == "":
+            print("Error - Task name CANNOT be blank!")
+            task_name = input("Enter task name: ")
+        priority = input("Enter task priority (High/Medium/Low): ")
+        while priority == "":
+            print("Error - Priority CANNOT be blank!")
+            priority = input("Enter task priority (High/Medium/Low): ")
+        print()
+        task = {"name": task_name, "priority": priority, "status": "Not started"}
+        tasks.append(task)
+        print("Task added sucessfully!")
+        print()
+    elif choice == "2":
+       print()
+       print(f"You selected option: {choice}")
+       print()
+       if len(tasks) == 0:
+           print("No tasks recorded yet")
+           print()
+       else:
+           print("All tasks:")
+           print()
+           for task in tasks:
+               print(f"Task: {task['name']}")
+               print(f"Priority: {task['priority']}")
+               print(f"Status: {task['status']}")
+               print("---------------------------------------")
+           print()
+    print()
+    # print(f"You selected option: {choice}") I moved this to the first line after the choice made as it 
+    print()                                 # made more sense to have this message appear BEFORE any other
+                                            # informtion
 
 
 

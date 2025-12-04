@@ -186,24 +186,7 @@ choice = 0
 # 3. Test it by entering invalid options like "5" or "hello"
 #
 # Write your code (add to your while loop from Task 4):
-while choice != "3":
-    print("1. Add task")
-    print("2. View all task")
-    print("3. Exit")
-    print()
-    choice = input("Select an option: ")
-    while choice != "1" and choice != "2" and choice != "3":
-       print("ERROR: Invalid choice")
-       print()
-       print("1. Add task")
-       print("2. View all tasks")
-       print("3. Exit")
-       print()
-       choice = input("Select an option: ")
-       print()
-    print()
-    print(f"You selected option: {choice}")
-    print()
+
 
 
 
@@ -237,7 +220,30 @@ while choice != "3":
 # 2. Test option 1 - it should ask for input and confirm
 #
 # Write your code (add to your while loop):
-
+while choice != "3":
+    print("1. Add task")
+    print("2. View all task")
+    print("3. Exit")
+    print()
+    choice = input("Select an option: ")
+    while choice != "1" and choice != "2" and choice != "3":
+       print("ERROR: Invalid choice")
+       print()
+       print("1. Add task")
+       print("2. View all tasks")
+       print("3. Exit")
+       print()
+       choice = input("Select an option: ")
+       print()
+    if choice == "1":
+        task_name = input("Enter task name: ")
+        priority = input("Enter task priority (High/Medium/Low): ")
+        print()
+        print("Task added sucessfully!")
+        print()
+    print()
+    print(f"You selected option: {choice}")
+    print()
 
 
 
